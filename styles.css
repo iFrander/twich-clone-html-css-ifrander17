@@ -1,0 +1,338 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body{
+    background-color:  #fefefe;
+}
+.nav-container{
+    margin: 0;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content:space-between;
+    box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.2);;
+    position: fixed;
+    z-index: 5;
+    padding: 15px;
+}
+.nav-cont-one{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+    gap: 35px;
+}
+.nav-cont-one a{
+    color: #000;
+    font-weight: 700;
+    font-size: large;
+    text-decoration: none;
+}
+.nav-cont-one a:hover{
+    color: rgb(72,20,148);
+}
+.nav-cont-one ul{
+    list-style: none;
+}
+.nav-cont-two{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 80px;
+}
+.nav-cont-two input{
+    border-radius: 5px 0px 0px 5px;
+    border-style: solid;
+    border-width: 1px;
+    padding: 9px;
+    width: 350px;
+}
+.nav-cont-two input:focus{
+    outline: none;
+    border-color: blueviolet;
+    border-width: 5px;
+    border-radius: 11px;
+}
+.nav-cont-two button{
+    border-radius: 0px 5px 5px 0px;
+    border-style: none;
+    padding: 8px;
+}
+.nav-cont-three{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+    gap: 10px;
+}
+.nav-cont-three a{
+    text-decoration: none;
+}
+.nav-cont-three button{
+    display: flex;
+    align-items: center;
+    border-style: none;
+    height: 30px;
+    padding: 10px;
+    font-weight: 600;
+}
+#log-button{
+    border-radius: 4px;
+}
+#log-button:hover{
+    background-color: #e9e9e9;
+}
+#reg-button:hover{
+    background-color: #7a31d8;
+}
+#reg-button{
+    background-color: #9444fc;
+    color: #fff;
+    border-radius: 4px;
+}
+.user-back{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    border-radius: 4px;
+    width: 30px;
+    height: 30px;
+}
+.user-back:hover{
+    background-color: #e9e9e9;
+}
+.nav-cont-three ul{
+    list-style: none;
+}
+.logo{
+    height: 30px;
+}
+.icon{
+    height: 17px;
+}
+
+.aside-container{
+    background-color: #f8f8f8;
+    width: 240px;
+    height: 100vh;
+    top: 50px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aside-title{
+    display: flex;
+    width: 240px;
+    align-items: center;
+
+}
+
+section{
+    margin-left: 240px ;
+    height: 400px;
+    background-color:#fefefe;
+    position: relative;
+}
+
+section div{
+    width: 400px;
+    height: 250px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+section div img{
+    width: 450px;
+}
+
+section div:nth-child(1){
+    width: 450px;
+    height: 250px;
+    transform-origin: 50% 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(231, 231, 231);
+    z-index: 4;
+}
+section div:nth-child(2){
+    width: 400px;
+    height: 200px;
+    transform-origin: 50% 50%;
+    transform: translate(0%, -50%);
+    transition: all  0.3s ease;
+    background-color: rgb(255, 157, 0);
+    z-index: 3;
+}
+
+section div:nth-child(2):hover{
+    transform: translate(0%,-50%) scale(1.05);
+}
+
+section div:nth-child(3){
+    width: 350px;
+    height: 150px;
+    transform-origin: 50% 50%;
+    transform: translate(50%, -50%);
+    transition: all  0.3s ease;
+    background-color: rgb(167, 16, 175);
+    z-index: 2;
+}
+
+section div:nth-child(3):hover{
+    transform: translate(50%,-50%) scale(1.05);
+}
+
+section div:nth-child(4){
+    width: 400px;
+    height: 200px;
+    transform-origin: 50% 50%;
+    transform: translate(-100%, -50%);
+    transition: all  0.3s ease;
+    background-color: chartreuse;
+    z-index: 3;
+}
+section div:nth-child(4):hover{
+    transform: translate(-100%,-50%) scale(1.05);
+}
+section div:nth-child(5){
+    width: 350px;
+    height: 150px;
+    transform-origin: 50% 50%;
+    transform: translate(-150%, -50%);
+    transition: all  0.3s ease;
+    background-color: rgb(209, 74, 37);
+    z-index: 2;
+}
+section div:nth-child(5):hover{
+    transform: translate(-150%,-50%) scale(1.05);
+}
+
+main{
+    padding-top: 100px;
+    margin-left: 290px;
+    height: 100vh;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    position: relative;
+}
+
+.miniatura-container img{
+    width: 250px;
+    position: absolute;
+}
+
+.live-video p{
+    background-color: red;
+    color: #fff;
+    font-size: smaller;
+    margin: 10px;
+    padding: 2px 6px 2px 6px;
+    font-weight: 700;
+    border-radius: 3px;
+    position: absolute;
+    z-index: 10;
+}
+
+.video{
+    width: 250px;
+    height: 250px;
+
+    display: flex;
+}
+
+.video-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.descripcion-container{
+    display: flex;
+    gap: 10px;
+    padding-left: px;
+    margin-top: 150px;
+}
+
+.streamer-photo{
+    width: 40px;
+    border-radius: 100px;
+}
+
+.title-video{
+    font-weight: 600;
+}
+
+.title-video:hover{
+    color: #9444fc;
+}
+.game, .tw-username{
+    color: #1e1e1e;
+    font-size: small;
+
+}
+footer{
+    background-color: rgb(72,20,148);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 9vh;
+    position: fixed;
+    bottom: 0;
+    font-size: larger;
+}
+
+.separador-cont-one{
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+}
+
+.footer-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 15px ;
+}
+
+.footer-cont-one{
+    display: flex;
+    align-items: center; 
+}
+
+.footer-cont-two{
+    font-weight: bold;
+    padding: 10px;
+}
+
+.footer-cont-three{
+    display: flex;
+    flex-direction: row;
+    padding: 60px;
+}
+
+.footer-cont-three button{
+    background-color: #fff;
+    border-radius: 4px;
+    border-style: none;
+    font-size: small;
+    font-weight: 600;
+    width: 90px;
+    height: 30px;
+}
+
+.footer-cont-three button:hover{
+    background-color: #e9e9e9;
+}
+
+.footer-cont-one img{
+    height: 40px;
+}
