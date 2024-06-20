@@ -19,6 +19,27 @@ body{
     z-index: 5;
     padding: 15px;
 }
+#check-menu{
+    display: none;
+    
+}
+
+#check-menu:checked ~ #menu-mas{
+    display: block;
+}
+#menu-mas{
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 40px;
+    left: 185px;
+    display: none;
+}
+
+.nav-more-options{
+    position: relative;
+    background-color: #7a31d8;
+}
+
 .nav-cont-one{
     display: flex;
     flex-direction: row;
@@ -130,32 +151,97 @@ body{
 .aside-title{
     display: flex;
     width: 240px;
+    height: 50px;
     align-items: center;
+    padding: px;
+    justify-content: center;
+    gap: 15px;
+}
 
+.aside-title a{
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.aside-title a:hover{
+    background-color: #e9e9e9;
+}
+
+.canales{
+    width: 240px;
+    height: 500px;
+    display: flex; 
+    flex-direction: column;
+}
+
+.canal{
+    width: 100%;
+    display: flex;
+    padding: 4px;
+}
+
+.data-canal{
+    display: flex;
+    font-size: small;
+    color: #808080;
+    justify-content: space-between;
+    width: 100%;
+}
+.canal:hover{
+    background-color:#e4e4e4;
+}
+.texto-izq{
+    padding-left: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.aside-name-canal{
+    font-weight: 600;
+    color: #000;
+}
+
+.aside-img-canal img{
+    width: 35px;
+    border-radius: 100px;
+}
+
+.red-point{
+    width: 10px;
+    height: 10px;
+    background-color: rgb(207, 0, 0);
+    border-radius: 100px;
+}
+.viewers {
+    display: flex;
+    gap: 5px;
+    align-items: center;
 }
 
 section{
     margin-left: 240px ;
-    height: 400px;
+    height: 450px;
     background-color:#fefefe;
     position: relative;
 }
 
 section div{
-    width: 400px;
-    height: 250px;
+    width: 500px;
+    height: 300px;
     position: absolute;
     top: 50%;
     left: 50%;
 }
 
 section div img{
-    width: 450px;
+    width: 100%;
+    height: 100%;
 }
 
 section div:nth-child(1){
-    width: 450px;
-    height: 250px;
+    width: 550px;
+    height: 280px;
     transform-origin: 50% 50%;
     transform: translate(-50%, -50%);
     background-color: rgb(231, 231, 231);
@@ -163,7 +249,7 @@ section div:nth-child(1){
 }
 section div:nth-child(2){
     width: 400px;
-    height: 200px;
+    height: 240px;
     transform-origin: 50% 50%;
     transform: translate(0%, -50%);
     transition: all  0.3s ease;
@@ -177,7 +263,7 @@ section div:nth-child(2):hover{
 
 section div:nth-child(3){
     width: 350px;
-    height: 150px;
+    height: 200px;
     transform-origin: 50% 50%;
     transform: translate(50%, -50%);
     transition: all  0.3s ease;
@@ -191,7 +277,7 @@ section div:nth-child(3):hover{
 
 section div:nth-child(4){
     width: 400px;
-    height: 200px;
+    height: 240px;
     transform-origin: 50% 50%;
     transform: translate(-100%, -50%);
     transition: all  0.3s ease;
@@ -203,7 +289,7 @@ section div:nth-child(4):hover{
 }
 section div:nth-child(5){
     width: 350px;
-    height: 150px;
+    height: 200px;
     transform-origin: 50% 50%;
     transform: translate(-150%, -50%);
     transition: all  0.3s ease;
@@ -214,10 +300,25 @@ section div:nth-child(5):hover{
     transform: translate(-150%,-50%) scale(1.05);
 }
 
-main{
-    padding-top: 100px;
-    margin-left: 290px;
-    height: 100vh;
+.titulo-main{
+    font-size: large;
+    font-weight: 600;
+    height: 30px;
+    margin-left: 280px;
+}
+
+.titulo-main a{
+    color: #7a31d8;
+    text-decoration: none;
+}
+
+.titulo-main a:hover{
+    text-decoration: underline;
+}
+
+.auxiliar{
+    margin-left: 280px;
+    height: 80vh;
     display: grid;
     gap: 10px;
     grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
@@ -238,13 +339,12 @@ main{
     font-weight: 700;
     border-radius: 3px;
     position: absolute;
-    z-index: 10;
+    z-index: 1;
 }
 
 .video{
     width: 250px;
     height: 250px;
-
     display: flex;
 }
 
@@ -287,6 +387,7 @@ footer{
     position: fixed;
     bottom: 0;
     font-size: larger;
+    z-index: 2;
 }
 
 .separador-cont-one{
